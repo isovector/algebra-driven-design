@@ -1,5 +1,5 @@
 name:                algebra-driven-design
-version:             0.1.0.0
+version:             0.1.0.1
 github:              "isovector/algebra-driven-design"
 license:             BSD3
 author:              "Sandy Maguire"
@@ -9,6 +9,8 @@ copyright:           "2020 Sandy Maguire"
 extra-source-files:
 - README.md
 - ChangeLog.md
+- static/sandy.png
+- static/haskell.png
 
 # Metadata used when publishing your package
 synopsis:            Companion library for the book Algebra-Driven Design by Sandy Maguire
