@@ -1,9 +1,12 @@
 {-# LANGUAGE DeriveDataTypeable    #-}
 {-# LANGUAGE DeriveGeneric         #-}
+{-# LANGUAGE DerivingStrategies    #-}
 {-# LANGUAGE FlexibleInstances     #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
+{-# LANGUAGE ScopedTypeVariables   #-}
+{-# LANGUAGE TypeApplications      #-}
 
-module Workflow.WIP2 where
+module ADD.Games.Correct where
 
 import Data.Foldable
 import qualified Data.Set as S
@@ -329,9 +332,6 @@ sig_options = signature
   [ withMaxTermSize 5
   ]
 
-
-main :: IO ()
-main = traverse_ (quickCheckWith stdArgs {maxSuccess=100000} . uncurry counterexample) quickspec_laws'
 
 
 

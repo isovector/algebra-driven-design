@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 9d595110c5498b2ad716d1d29ee5d570a32e9d095bcd424cbdd18bc7cc88bcf1
+-- hash: 2133a83c86d8e9558f16b91bedae2315b1a71469244bbf95b27b278f6c10ef01
 
 name:           algebra-driven-design
 version:        0.1.0.0
@@ -39,5 +39,8 @@ library
       JuicyPixels
     , QuickCheck
     , base >=4.7 && <5
+    , containers
     , file-embed
+    , mtl
+    , quickspec
   default-language: Haskell2010

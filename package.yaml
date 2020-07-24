@@ -24,6 +24,9 @@ dependencies:
 - QuickCheck
 - JuicyPixels
 - file-embed
+- quickspec
+- mtl
+- containers
 
 library:
   source-dirs: src
