@@ -4,6 +4,7 @@
 {-# LANGUAGE FlexibleContexts      #-}
 {-# LANGUAGE FlexibleInstances     #-}
 {-# LANGUAGE GADTs                 #-}
+{-# LANGUAGE MultiParamTypeClasses #-}
 {-# LANGUAGE PatternSynonyms       #-}
 {-# LANGUAGE QuantifiedConstraints #-}
 {-# LANGUAGE ScopedTypeVariables   #-}
@@ -66,6 +67,7 @@ import Data.FileEmbed
 import Data.Functor.Compose
 import Data.Word
 import Test.QuickCheck hiding (label)
+import QuickSpec
 
 
 ------------------------------------------------------------------------------
@@ -117,7 +119,7 @@ _rgba r g b a =
     (bounded a)
   where
     bounded :: Double -> Word8
-    bounded x = round $ x * fromIntegral (maxBound @Word8)
+    bounded x = round $ max 0 (min 1 x) * fromIntegral (maxBound @Word8)
 
 ------------------------------------------------------------------------------
 -- |
@@ -148,8 +150,43 @@ newtype Tile a = Tile
 instance Show (Tile t) where
   show _ = "<tile>"
 
-instance Arbitrary a => Arbitrary (Tile a) where
-  arbitrary = Tile <$> arbitrary
+instance Ord a => Observe (Small Int, Small Int) [[a]] (Tile a) where
+  observe (Small w, Small h) = rasterize w h
+
+instance (CoArbitrary a, Arbitrary a) => Arbitrary (Tile a) where
+  arbitrary = sized $ \n ->
+    case n <= 1 of
+      True -> pure <$> arbitrary
+      False -> oneof
+        [ pure <$> arbitrary
+        , beside <$> scaledAbitrary 2 <*> scaledAbitrary 2
+        , above <$> scaledAbitrary 2 <*> scaledAbitrary 2
+        , cw <$> arbitrary
+        , ccw <$> arbitrary
+        , flipV <$> arbitrary
+        , flipH <$> arbitrary
+        , (<*>) <$> scaledAbitrary @(Tile (Bool -> _)) 2 <*> scaledAbitrary 2
+        ]
+
+instance {-# OVERLAPPING #-} Arbitrary (Tile Color) where
+  arbitrary = sized $ \n ->
+    case n <= 1 of
+      True -> pure <$> arbitrary
+      False -> oneof
+        [ pure <$> arbitrary
+        , beside <$> scaledAbitrary 2 <*> scaledAbitrary 2
+        , above <$> scaledAbitrary 2 <*> scaledAbitrary 2
+        , cw <$> arbitrary
+        , ccw <$> arbitrary
+        , flipV <$> arbitrary
+        , flipH <$> arbitrary
+        , (<*>) <$> scaledAbitrary @(Tile (Bool -> _)) 2 <*> scaledAbitrary 2
+        , behind <$> scaledAbitrary 2 <*> scaledAbitrary 2
+        , color <$> arbitrary <*> arbitrary <*> arbitrary <*> arbitrary
+        ]
+
+scaledAbitrary :: Arbitrary a => Int -> Gen a
+scaledAbitrary n = scale (`div` n) arbitrary
 
 instance CoArbitrary PixelRGBA8 where
   coarbitrary (Color r g b a) = coarbitrary (r, g, b, a)
@@ -348,14 +385,14 @@ sandy =
 
 ------------------------------------------------------------------------------
 -- | Rasterize a 'Tile' down into a row-major representation of its constituent
--- "pixels". For a version that emits a list of lists directly, see 'rasterize''.
+-- "pixels".
 rasterize
     :: forall a
      . Int  -- ^ resulting width
     -> Int  -- ^ resulting heigeht
     -> Tile a
-    -> Compose ZipList ZipList a  -- ^ the resulting "pixels" in row-major order
-rasterize w h (Tile t) = coerce $ do
+    -> [[a]]  -- ^ the resulting "pixels" in row-major order
+rasterize w h (Tile t) = do
   y <- [0 .. (h - 1)]
   pure $ do
     x <- [0 .. (w - 1)]
@@ -369,11 +406,24 @@ rasterize w h (Tile t) = coerce $ do
     f x y = t (coord x w) (coord y h)
 
 ------------------------------------------------------------------------------
--- | Like 'rasterize', but with a more convenient output type.
+-- | Like 'rasterize'', but with a type more convenient for showing off the
+-- applicative homomorphism.
 rasterize'
     :: Int  -- ^ resulting width
     -> Int  -- ^ resulting heigeht
     -> Tile a
-    -> [[a]]  -- ^ the resulting "pixels" in row-major order
+    -> Compose ZipList ZipList a  -- ^ the resulting "pixels" in row-major order
 rasterize' w h t = coerce $ rasterize w h t
+
+sig :: Sig
+sig = signature
+  [ monoObserve @(Tile Color)
+  , con "flipH" $ flipH @A
+  , con "flipV" $ flipV @A
+  , con "beside" $ beside @A
+  , con "above" $ above @A
+  , con "behind" $ behind
+  , con "cw" $ cw @A
+  , con "ccw" $ ccw @A
+  ]
 
