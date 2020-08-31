@@ -4,6 +4,8 @@ packages:
 - .
 
 extra-deps:
-- quickspec-2.1.4
+- ../quickspec
 - twee-lib-2.2@sha256:9fe9327505d8f450a94f2fc9eea74b292901b7992d520aa1dd4f0410fbe0e594,2112
+- monoidal-containers-0.6.0.1@sha256:7d776942659eb4d70d8b8da5d734396374a6eda8b4622df9e61e26b24e9c8e40,2501
+
 

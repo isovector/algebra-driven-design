@@ -1,5 +1,5 @@
 name:                algebra-driven-design
-version:             0.1.0.1
+version:             0.1.1.0
 github:              "isovector/algebra-driven-design"
 license:             BSD3
 author:              "Sandy Maguire"
@@ -11,6 +11,7 @@ extra-source-files:
 - ChangeLog.md
 - static/sandy.png
 - static/haskell.png
+- static/spj.png
 
 # Metadata used when publishing your package
 synopsis:            Companion library for the book Algebra-Driven Design by Sandy Maguire
@@ -24,11 +25,46 @@ description:         Please see the README on GitHub at <https://github.com/isov
 dependencies:
 - base >= 4.7 && < 5
 - QuickCheck
-- JuicyPixels
-- file-embed
 - quickspec
-- mtl
 - containers
+- mtl
+- bytestring
+- hashable
+- JuicyPixels
+- multiset
+- monoid-subclasses
+- monoidal-containers
+- generic-data
+- dlist
+- file-embed
+
+ghc-options:
+  - -Wall
+  - -Wcompat
+  - -Widentities
+  - -Wincomplete-uni-patterns
+  - -Wincomplete-record-updates
+  - -Wredundant-constraints
+  - -fhide-source-paths
+  - -Wpartial-fields
+  - -Wmissing-deriving-strategies
+
+default-extensions:
+  - ConstraintKinds
+  - DeriveGeneric
+  - GeneralizedNewtypeDeriving
+  - InstanceSigs
+  - KindSignatures
+  - LambdaCase
+  - OverloadedStrings
+  - RecordWildCards
+  - ScopedTypeVariables
+  - StandaloneDeriving
+  - TupleSections
+  - TypeApplications
+  - ViewPatterns
+  - DerivingStrategies
+  - DerivingVia
 
 library:
   source-dirs: src
