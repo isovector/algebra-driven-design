@@ -4,10 +4,10 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: dd9b7e4ee0192c481374c8af6d85e151a6d20d9d65438db2019bb40253841345
+-- hash: 9e5261f178a37d13a7b275cfe69532df0a648e4c5d39d6c51ef47bc9e4f86325
 
 name:           algebra-driven-design
-version:        0.1.1.0
+version:        0.1.1.1
 synopsis:       Companion library for the book Algebra-Driven Design by Sandy Maguire
 description:    Please see the README on GitHub at <https://github.com/isovector/algebra-driven-design#readme>
 category:       Book
@@ -25,6 +25,7 @@ extra-source-files:
     static/sandy.png
     static/haskell.png
     static/spj.png
+    src/Scavenge/spec.inc
 
 source-repository head
   type: git
