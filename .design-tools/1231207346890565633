@@ -1,0 +1,1 @@
+CodeBlock ("",["haskell","ghci"],[]) "> fst $ step mempty (Just $ Number 1) (andThen (clue \"problem\" empty) $ points 5) >>= step mempty Nothing\nResults {rewards = fromOccurList [(Points 5,1)], clues = MonoidalMap {getMonoidalMap = fromList [(\"problem\",Completed)]}}\n\n\n"
