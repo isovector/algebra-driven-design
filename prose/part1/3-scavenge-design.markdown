@@ -1779,7 +1779,7 @@ process, we made up lots of types to help us reason through the specifics:
 things like `Photo`, `Point`, `Distance`, `Altitude` and `Time`. While we have
 *constructors* which use these types, the algebra itself --- that is, the laws
 that govern its behavior --- is utterly agnostic to these types. While they
-might be part of the specific application we're building, they have no place is
+might be part of the specific application we're building, they have no place in
 the reusable machinery we're building.
 
 By looking at where these types are used, we find them appear only in the inputs
