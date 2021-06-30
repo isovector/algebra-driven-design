@@ -1,0 +1,429 @@
+
+@incollection{hughes_design_1995,
+	location = {Berlin, Heidelberg},
+	title = {The design of a pretty-printing library},
+	volume = {925},
+	isbn = {978-3-540-59451-2 978-3-540-49270-2},
+	url = {http://link.springer.com/10.1007/3-540-59451-5_3},
+	pages = {53--96},
+	booktitle = {Advanced Functional Programming},
+	publisher = {Springer Berlin Heidelberg},
+	author = {Hughes, John},
+	editor = {Jeuring, Johan and Meijer, Erik},
+	editorb = {Goos, Gerhard and Hartmanis, Juris and Leeuwen, Jan},
+	editorbtype = {redactor},
+	urldate = {2020-04-01},
+	date = {1995},
+	doi = {10.1007/3-540-59451-5_3},
+	note = {Series Title: Lecture Notes in Computer Science}
+}
+
+@book{mcbride_derivative_2001,
+	title = {The Derivative of a Regular Type is its Type of One-Hole Contexts (Extended Abstract)},
+	shorttitle = {{McBride}01},
+	author = {{McBride}, Conor},
+	date = {2001}
+}
+
+@article{bohm_automatic_1985,
+	title = {Automatic synthesis of typed Λ-programs on term algebras},
+	volume = {39},
+	issn = {03043975},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/0304397585901355},
+	doi = {10.1016/0304-3975(85)90135-5},
+	pages = {135--154},
+	journaltitle = {Theoretical Computer Science},
+	shortjournal = {Theoretical Computer Science},
+	author = {Böhm, Corrado and Berarducci, Alessandro},
+	urldate = {2020-04-02},
+	date = {1985},
+	langid = {english},
+	file = {Full Text:/home/sandy/Zotero/storage/SWKC97MF/Böhm and Berarducci - 1985 - Automatic synthesis of typed Λ-programs on term al.pdf:application/pdf}
+}
+
+@online{kiselyov_how_2008,
+	title = {How to zip folds: A library of fold transformers (streams)},
+	url = {http://okmij.org/ftp/Haskell/zip-folds.lhs},
+	shorttitle = {Kiselyov08},
+	author = {Kiselyov, Oleg},
+	urldate = {2020-04-02},
+	date = {2008},
+	file = {:/home/sandy/Zotero/storage/V8YPEGMS/zip-folds.html:text/html}
+}
+
+@inproceedings{koopman_church_2014,
+	location = {Boston, {MA}, {USA}},
+	title = {Church Encoding of Data Types Considered Harmful for Implementations: Functional Pearl},
+	isbn = {978-1-4503-3284-2},
+	url = {http://dl.acm.org/citation.cfm?doid=2746325.2746330},
+	doi = {10.1145/2746325.2746330},
+	shorttitle = {Koopman14},
+	eventtitle = {the 26nd 2014 International Symposium},
+	pages = {1--12},
+	booktitle = {Proceedings of the 26nd 2014 International Symposium on Implementation and Application of Functional Languages - {IFL} '14},
+	publisher = {{ACM} Press},
+	author = {Koopman, Pieter and Plasmeijer, Rinus and Jansen, Jan Martin},
+	urldate = {2020-04-02},
+	date = {2014},
+	langid = {english}
+}
+
+@book{evans_domain-driven_2004,
+	location = {Boston},
+	title = {Domain-driven design: tackling complexity in the heart of software},
+	isbn = {978-0-321-12521-7},
+	shorttitle = {Evans04},
+	pagetotal = {529},
+	publisher = {Addison-Wesley},
+	author = {Evans, Eric},
+	date = {2004},
+	keywords = {Computer software, Development, Object-oriented programming (Computer science)}
+}
+
+@unpublished{koppel_you_2018,
+	location = {Strange Loop},
+	title = {You are a Program Synthesizer},
+	url = {https://www.youtube.com/watch?v=ldkF-4WNZqA},
+	shorttitle = {Koppel18},
+	abstract = {In my day job, I work with programs that write, analyze, and transform other programs. You can't do this unless you have some special insig...},
+	author = {Koppel, James},
+	urldate = {2020-04-07},
+	date = {2018-09-27},
+	note = {Library Catalog: www.pathsensitive.com},
+	file = {Snapshot:/home/sandy/Zotero/storage/U7FMV2VE/my-strange-loop-talk-you-are-program.html:text/html}
+}
+
+@unpublished{bjarnason_constraints_2015,
+	location = {Scala World},
+	title = {Constraints Liberate, Liberties Constrain},
+	url = {https://www.youtube.com/watch?v=GqmsQeSzMdw},
+	shorttitle = {Bjarnason16},
+	abstract = {As programmers, we tend to think of expressive power of a language or library as an unmitigated good. In this talk I want to show the contrary; that restraint and precision are usually better than power and flexibility. A constraint on component design leads to freedom and power when putting those components together into systems.
+
+What’s more, this feature is built into the very nature of language and reasoning.},
+	author = {Bjarnason, Runar},
+	urldate = {2020-04-08},
+	date = {2015-09-20}
+}
+
+@unpublished{koppel_best_2019,
+	location = {Compose {NYC} 2019},
+	title = {The Best Refactoring You’ve Never Heard Of},
+	url = {https://www.youtube.com/watch?v=vNwukfhsOME},
+	shorttitle = {Koppel19},
+	abstract = {Compose {NYC} 2019
+Speaker: James Koppel
+
+Every problem can be solved by many designs. Often the relation between two designs is that one is a transformation of another. When we understand how to mechanically transform designs, we can more easily explore the design space, and effortlessly identify the tradeoffs.
+
+So, what do these design changes have in common?
+
+* Letting a search procedure take an arbitrary filter function, instead of a fixed set of options
+* Changing a program using blocking I/O to non-blocking I/O with an event loop
+* Letting a user stop in the middle of an action — and resume it after a server reboot
+
+Answer: They’re all instances of a transformation called “defunctionalization” or its inverse, “refunctionalization.” Come learn how it works, and learn to recognize when a proposed design change is just an instance of this general technique. In doing so, you’ll learn how the tradeoffs between designs can be boiled down into a single slogan: refunctionalized is more open, defunctionalized is more inspectable. As a plus, you’ll also learn how defunctionalization is the oldest technique to compile functional languages.},
+	author = {Koppel, James},
+	urldate = {2020-04-08},
+	date = {2019-06-25}
+}
+
+@article{dijkstra_humble_1972,
+	title = {The humble programmer},
+	volume = {15},
+	issn = {00010782},
+	url = {http://portal.acm.org/citation.cfm?doid=355604.361591},
+	doi = {10.1145/355604.361591},
+	shorttitle = {Dijkstra72},
+	pages = {859--866},
+	number = {10},
+	journaltitle = {Communications of the {ACM}},
+	shortjournal = {Commun. {ACM}},
+	author = {Dijkstra, Edsger W.},
+	urldate = {2020-04-08},
+	date = {1972-10-01}
+}
+
+@incollection{dijkstra_why_1982,
+	title = {Why is software so expensive?},
+	isbn = {0-387-90652-5},
+	url = {https://www.cs.utexas.edu/users/EWD/transcriptions/EWD06xx/EWD648.html},
+	shorttitle = {{EWD}648},
+	booktitle = {Selected Writings on Computing},
+	publisher = {Springer-Verlag},
+	author = {Dijkstra, Edsger W.},
+	urldate = {2020-04-08},
+	date = {1982},
+	file = {E. W. Dijkstra Archive\: "Why is software so expensive?" An explanation to the hardware designer. (EWD 648):/home/sandy/Zotero/storage/B2H8V4E2/EWD648.html:text/html}
+}
+
+@online{nelson_design_2017,
+	title = {The Design and Use of {QuickCheck}},
+	url = {https://begriffs.com/posts/2017-01-14-design-use-quickcheck.html},
+	shorttitle = {Begrifss17},
+	abstract = {How to use {QuickCheck} with Confidence},
+	titleaddon = {begriffs},
+	author = {Nelson, Joe},
+	urldate = {2020-04-09},
+	date = {2017-01-14},
+	langid = {english},
+	note = {Library Catalog: begriffs.com},
+	file = {Snapshot:/home/sandy/Zotero/storage/NR7ZC2AP/2017-01-14-design-use-quickcheck.html:text/html}
+}
+
+@article{claessen_testing_2002,
+	title = {Testing monadic code with {QuickCheck}},
+	volume = {37},
+	issn = {03621340},
+	url = {http://portal.acm.org/citation.cfm?doid=636517.636527},
+	doi = {10.1145/636517.636527},
+	shorttitle = {Claessen02},
+	pages = {47},
+	number = {12},
+	journaltitle = {{ACM} {SIGPLAN} Notices},
+	shortjournal = {{SIGPLAN} Not.},
+	author = {Claessen, Koen and Hughes, John},
+	urldate = {2020-04-09},
+	date = {2002-12-01},
+	langid = {english}
+}
+
+@article{landin_next_1966,
+	title = {The next 700 programming languages},
+	volume = {9},
+	issn = {00010782},
+	url = {http://portal.acm.org/citation.cfm?doid=365230.365257},
+	doi = {10.1145/365230.365257},
+	shorttitle = {Landin66},
+	pages = {157--166},
+	number = {3},
+	journaltitle = {Communications of the {ACM}},
+	shortjournal = {Commun. {ACM}},
+	author = {Landin, P. J.},
+	urldate = {2020-04-10},
+	date = {1966-03-01}
+}
+
+@collection{leeuwen_handbook_1990,
+	location = {Amsterdam ; New York : Cambridge, Mass},
+	title = {Handbook of theoretical computer science},
+	isbn = {978-0-444-88075-8 978-0-444-88071-0 978-0-444-88074-1 978-0-262-22040-8 978-0-262-22038-5 978-0-262-22039-2},
+	pagetotal = {2},
+	publisher = {Elsevier ; {MIT} Press},
+	editor = {Leeuwen, J. van},
+	date = {1990},
+	keywords = {Computer science}
+}
+
+@article{guttag_algebraic_1978,
+	title = {The algebraic specification of abstract data types},
+	volume = {10},
+	issn = {0001-5903, 1432-0525},
+	url = {http://link.springer.com/10.1007/BF00260922},
+	doi = {10.1007/BF00260922},
+	shorttitle = {Guttag78},
+	number = {1},
+	journaltitle = {Acta Informatica},
+	shortjournal = {Acta Informatica},
+	author = {Guttag, J.V. and Horning, J.J.},
+	urldate = {2020-04-14},
+	date = {1978},
+	langid = {english}
+}
+
+@article{thatcher_data_1982,
+	title = {Data Type Specification: Parameterization and the Power of Specification Techniques},
+	volume = {4},
+	issn = {0164-0925, 1558-4593},
+	url = {http://dl.acm.org/doi/10.1145/69622.357192},
+	doi = {10.1145/69622.357192},
+	shorttitle = {Thatcher82},
+	pages = {711--732},
+	number = {4},
+	journaltitle = {{ACM} Transactions on Programming Languages and Systems ({TOPLAS})},
+	shortjournal = {{ACM} Trans. Program. Lang. Syst.},
+	author = {Thatcher, J. W. and Wagner, E. G. and Wright, J. B.},
+	urldate = {2020-04-14},
+	date = {1982-10},
+	langid = {english},
+	file = {Full Text:/home/sandy/Zotero/storage/CPKEKDD8/Thatcher et al. - 1982 - Data Type Specification Parameterization and the .pdf:application/pdf}
+}
+
+@unpublished{hughes_building_2019,
+	location = {Lambda Days 19},
+	title = {Building on developers' intuitions},
+	url = {https://www.youtube.com/watch?v=NcJOiQlzlXQ},
+	author = {Hughes, John},
+	urldate = {2020-05-18},
+	date = {2019-02-21}
+}
+
+@book{wickstrom_property-based_2019,
+	title = {Property-Based Testing in a Screencast Editor},
+	url = {https://leanpub.com/property-based-testing-in-a-screencast-editor},
+	publisher = {Leanpub},
+	author = {Wickström, Oskar},
+	urldate = {2020-05-18},
+	date = {2019-08-17},
+	file = {Property-Based Testing in a Screencast Editor\: Introduction | Oskar Wickström:/home/sandy/Zotero/storage/FSPZWJE3/property-based-testing-in-a-screencast-editor-introduction.html:text/html}
+}
+
+@online{grenrus_fix-ing_nodate,
+	title = {Fix-ing regular expressions},
+	author = {Grenrus, Oleg}
+}
+
+@article{smallbone_quick_2017,
+	title = {Quick specifications for the busy programmer},
+	volume = {27},
+	issn = {0956-7968, 1469-7653},
+	url = {https://www.cambridge.org/core/product/identifier/S0956796817000090/type/journal_article},
+	doi = {10.1017/S0956796817000090},
+	abstract = {Abstract
+            {QuickSpec} is a theory exploration system which tests a Haskell program to find equational properties of it, automatically. The equations can be used to help understand the program, or as lemmas to help prove the program correct. {QuickSpec} is largely automatic: the user just supplies the functions to be tested and {QuickCheck} data generators. Previous theory exploration systems, including earlier versions of {QuickSpec} itself, scaled poorly. This paper describes a new architecture for theory exploration with which we can find vastly more complex laws than before, and much faster. We demonstrate theory exploration in {QuickSpec} on problems both from functional programming and mathematics.},
+	pages = {e18},
+	journaltitle = {Journal of Functional Programming},
+	shortjournal = {J. Funct. Prog.},
+	author = {Smallbone, Nicholas and Johansson, Moa and Claessen, Koen and Algehed, Maximilian},
+	urldate = {2020-06-07},
+	date = {2017},
+	langid = {english},
+	file = {Submitted Version:/home/sandy/Zotero/storage/M22L9I3H/Smallbone et al. - 2017 - Quick specifications for the busy programmer.pdf:application/pdf}
+}
+
+@unpublished{hughes_how_2020,
+	location = {Lambda Days},
+	title = {How to specify it!},
+	url = {https://www.youtube.com/watch?v=G0NUOst-53U},
+	shorttitle = {John Hughes - Keynote},
+	note = {Lambda Days},
+	author = {Hughes, John},
+	urldate = {2020-06-07},
+	date = {2020-02-13}
+}
+
+@incollection{hughes_how_2020-1,
+	location = {Cham},
+	title = {How to Specify It!: A Guide to Writing Properties of Pure Functions},
+	volume = {12053},
+	isbn = {978-3-030-47146-0 978-3-030-47147-7},
+	url = {http://link.springer.com/10.1007/978-3-030-47147-7_4},
+	shorttitle = {How to Specify It!},
+	pages = {58--83},
+	booktitle = {Trends in Functional Programming},
+	publisher = {Springer International Publishing},
+	author = {Hughes, John},
+	editor = {Bowman, William J. and Garcia, Ronald},
+	urldate = {2020-06-08},
+	date = {2020},
+	langid = {english},
+	doi = {10.1007/978-3-030-47147-7_4},
+	note = {Series Title: Lecture Notes in Computer Science},
+	file = {Hughes - 2020 - How to Specify It! A Guide to Writing Properties .pdf:/home/sandy/Zotero/storage/WLIKJC6I/Hughes - 2020 - How to Specify It! A Guide to Writing Properties .pdf:application/pdf}
+}
+
+@incollection{hughes_experiences_2016,
+	location = {Cham},
+	title = {Experiences with {QuickCheck}: Testing the Hard Stuff and Staying Sane},
+	volume = {9600},
+	isbn = {978-3-319-30935-4 978-3-319-30936-1},
+	url = {http://link.springer.com/10.1007/978-3-319-30936-1_9},
+	shorttitle = {Experiences with {QuickCheck}},
+	pages = {169--186},
+	booktitle = {A List of Successes That Can Change the World},
+	publisher = {Springer International Publishing},
+	author = {Hughes, John},
+	editor = {Lindley, Sam and {McBride}, Conor and Trinder, Phil and Sannella, Don},
+	urldate = {2020-06-26},
+	date = {2016},
+	doi = {10.1007/978-3-319-30936-1_9},
+	note = {Series Title: Lecture Notes in Computer Science},
+	file = {Submitted Version:/home/sandy/Zotero/storage/JVKRMGCC/Hughes - 2016 - Experiences with QuickCheck Testing the Hard Stuf.pdf:application/pdf}
+}
+
+@article{jones_composing_2000,
+	title = {Composing contracts: an adventure in financial engineering (functional pearl)},
+	volume = {35},
+	issn = {03621340},
+	url = {http://portal.acm.org/citation.cfm?doid=357766.351267},
+	doi = {10.1145/357766.351267},
+	shorttitle = {Composing contracts},
+	pages = {280--292},
+	number = {9},
+	journaltitle = {{ACM} {SIGPLAN} Notices},
+	shortjournal = {{SIGPLAN} Not.},
+	author = {Jones, Simon Peyton and Eber, Jean-Marc and Seward, Julian},
+	urldate = {2020-06-26},
+	date = {2000-09-01},
+	langid = {english}
+}
+
+@report{elliott_denotational_2009,
+	title = {Denotational design with type class morphisms (extended version)},
+	url = {http://conal.net/papers/type-class-morphisms},
+	number = {2009-01},
+	institution = {{LambdaPix}},
+	author = {Elliott, Conal},
+	date = {2009-03}
+}
+
+@article{henderson_functional_2002,
+	title = {Functional Geometry},
+	volume = {15},
+	issn = {13883690},
+	url = {http://link.springer.com/10.1023/A:1022986521797},
+	doi = {10.1023/A:1022986521797},
+	pages = {349--365},
+	number = {4},
+	journaltitle = {Higher-Order and Symbolic Computation},
+	author = {Henderson, Peter},
+	urldate = {2020-07-12},
+	date = {2002}
+}
+
+@online{kutsurua_quicksort_2014,
+	title = {Quicksort with Python},
+	url = {https://stackoverflow.com/a/27461889},
+	titleaddon = {Stack Overflow},
+	author = {Kutsurua, George},
+	urldate = {2020-07-21},
+	date = {2014-12-13},
+	note = {Library Catalog: stackoverflow.com},
+	file = {Snapshot:/home/sandy/Zotero/storage/FXSHW85Z/quicksort-with-python.html:text/html}
+}
+
+@online{lipovaca_recursion_nodate,
+	title = {Recursion},
+	url = {http://learnyouahaskell.com/recursion},
+	titleaddon = {Learn You as Haskell for Great Good!},
+	author = {Lipovača, Miran},
+	urldate = {2020-07-21},
+	file = {Recursion - Learn You a Haskell for Great Good!:/home/sandy/Zotero/storage/CDJWSX69/recursion.html:text/html}
+}
+
+@unpublished{elliott_denotational_2015,
+	location = {Lambda Jam 2015},
+	title = {Denotational Design: From Meanings To Programs},
+	url = {https://www.youtube.com/watch?v=bmKYiUOEo2A},
+	shorttitle = {Lambda Jam 2015 - Conal Elliott - Denotational Design},
+	author = {Elliott, Conal},
+	urldate = {2020-07-24},
+	date = {2015-10-17}
+}
+
+@inproceedings{claessen_quickcheck_2000,
+	location = {Not Known},
+	title = {{QuickCheck}: a lightweight tool for random testing of Haskell programs},
+	isbn = {978-1-58113-202-1},
+	url = {http://portal.acm.org/citation.cfm?doid=351240.351266},
+	doi = {10.1145/351240.351266},
+	shorttitle = {{QuickCheck}},
+	eventtitle = {the fifth {ACM} {SIGPLAN} international conference},
+	pages = {268--279},
+	booktitle = {Proceedings of the fifth {ACM} {SIGPLAN} international conference on Functional programming  - {ICFP} '00},
+	publisher = {{ACM} Press},
+	author = {Claessen, Koen and Hughes, John},
+	urldate = {2020-08-12},
+	date = {2000},
+	langid = {english}
+}

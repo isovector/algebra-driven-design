@@ -12,6 +12,62 @@ packages:
   original:
     hackage: twee-lib-2.2@sha256:9fe9327505d8f450a94f2fc9eea74b292901b7992d520aa1dd4f0410fbe0e594,2112
 - completed:
+    hackage: quickcheck-higherorder-0.1.0.0@sha256:7264de7245f840b780fbdab67aa5becc9514a8ad86861504a03052b99cbd8ef6,2238
+    pantry-tree:
+      size: 871
+      sha256: 946b43cd37e7b8c557ffc48b6c2c4a4e952fa3e0d56d4c1c021998e0184276f5
+  original:
+    hackage: quickcheck-higherorder-0.1.0.0@sha256:7264de7245f840b780fbdab67aa5becc9514a8ad86861504a03052b99cbd8ef6,2238
+- completed:
+    hackage: test-fun-0.1.0.0@sha256:f0315ca26b8af27ec177c89a5ab2e25b535db36029cee428d8f5eafa66407296,1251
+    pantry-tree:
+      size: 741
+      sha256: 561e469f0cd4f1c52da262e452bbf141b583d4ec53eb915cf83e0b67e817554e
+  original:
+    hackage: test-fun-0.1.0.0@sha256:f0315ca26b8af27ec177c89a5ab2e25b535db36029cee428d8f5eafa66407296,1251
+- completed:
+    cabal-file:
+      size: 7425
+      sha256: 18d305b6f05f82e9b4252a252709072d5c4cd02fc532e994206c32812a2b2696
+    name: pandoc-crossref
+    version: 0.3.6.3
+    git: https://github.com/lierdakil/pandoc-crossref.git
+    pantry-tree:
+      size: 6304
+      sha256: bc118d82fd991378cf5a745c1cbd609ecb0286646d02a17b1d6d350606582953
+    commit: 28db58fa4efc4231ac774958ac20eb2275d87b86
+  original:
+    git: https://github.com/lierdakil/pandoc-crossref.git
+    commit: 28db58fa4efc4231ac774958ac20eb2275d87b86
+- completed:
+    hackage: data-accessor-template-0.2.1.16@sha256:be06c253e9d8bb77a942d20e8973b112c1d30161cf5a6934bc36ee0f04d9e27f,2901
+    pantry-tree:
+      size: 467
+      sha256: f5005d537b07f7bb6c5721aa648a1453aa64b852081d9ad7e8b6060f19d4d2dd
+  original:
+    hackage: data-accessor-template-0.2.1.16@sha256:be06c253e9d8bb77a942d20e8973b112c1d30161cf5a6934bc36ee0f04d9e27f,2901
+- completed:
+    hackage: roman-numerals-0.5.1.5@sha256:819d04d9d442b24629dd058f6f0b02bd78e9f9ae99538bc44ca448f1cb2b7b01,1208
+    pantry-tree:
+      size: 220
+      sha256: 2154c0f4a11842593586dc1932e233cd8c802994763f7d3ce3e5916be8bc7ee5
+  original:
+    hackage: roman-numerals-0.5.1.5@sha256:819d04d9d442b24629dd058f6f0b02bd78e9f9ae99538bc44ca448f1cb2b7b01,1208
+- completed:
+    hackage: ixset-1.1.1.1@sha256:be27159a55e8a81b7b50a27a6ca5bb56a145296877ae4551a43c06b75256103a,1623
+    pantry-tree:
+      size: 388
+      sha256: 2186c9181e8432c77fac1d0c8bf7aeeae5f31f8d31d4d7478a49445f1b6f1fda
+  original:
+    hackage: ixset-1.1.1.1@sha256:be27159a55e8a81b7b50a27a6ca5bb56a145296877ae4551a43c06b75256103a,1623
+- completed:
+    hackage: syb-with-class-0.6.1.13@sha256:b4316425ca16cabd2b982fb3c8e417f73b406dc8a23fd02973ab3d906141287e,1853
+    pantry-tree:
+      size: 531
+      sha256: de8c20cb0fd85def1d068b0df6d5eaf1c66dba14301215c809e3d5fd477a9adc
+  original:
+    hackage: syb-with-class-0.6.1.13@sha256:b4316425ca16cabd2b982fb3c8e417f73b406dc8a23fd02973ab3d906141287e,1853
+- completed:
     hackage: monoidal-containers-0.6.0.1@sha256:7d776942659eb4d70d8b8da5d734396374a6eda8b4622df9e61e26b24e9c8e40,2501
     pantry-tree:
       size: 569

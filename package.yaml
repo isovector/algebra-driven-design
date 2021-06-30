@@ -1,22 +1,14 @@
 name:                algebra-driven-design
-version:             0.1.1.1
+version:             0.1.0.0
 github:              "isovector/algebra-driven-design"
 license:             BSD3
 author:              "Sandy Maguire"
 maintainer:          "sandy@sandymaguire.me"
 copyright:           "2020 Sandy Maguire"
 
-extra-source-files:
-- README.md
-- ChangeLog.md
-- static/sandy.png
-- static/haskell.png
-- static/spj.png
-- src/Scavenge/spec.inc
-
 # Metadata used when publishing your package
-synopsis:            Companion library for the book Algebra-Driven Design by Sandy Maguire
-category:            Book
+# synopsis:            Short description of your package
+# category:            Web
 
 # To avoid duplicated efforts in documentation and dealing with the
 # complications of embedding Haddock markup inside cabal files, it is
@@ -37,7 +29,6 @@ dependencies:
 - monoidal-containers
 - generic-data
 - dlist
-- file-embed
 
 ghc-options:
   - -Wall
@@ -68,5 +59,4 @@ default-extensions:
   - DerivingVia
 
 library:
-  source-dirs: src
-
+  source-dirs: code/

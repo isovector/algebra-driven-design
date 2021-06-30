@@ -1,0 +1,77 @@
+/* This defines styles and classes used in the book */
+body { margin: 5%; text-align: justify; font-size: medium; }
+code { font-family: monospace; }
+h1 { text-align: left; }
+h2 { text-align: left; }
+h3 { text-align: left; }
+h4 { text-align: left; }
+h5 { text-align: left; }
+h6 { text-align: left; }
+h1.title { }
+h2.author { }
+h3.date { }
+nav#toc ol,
+nav#landmarks ol { padding: 0; margin-left: 1em; }
+nav#toc ol li,
+nav#landmarks ol li { list-style-type: none; margin: 0; padding: 0; }
+a.footnote-ref { vertical-align: super; }
+em, em em em, em em em em em { font-style: italic;}
+em em, em em em em { font-style: normal; }
+code{ white-space: pre-wrap; }
+span.smallcaps{ font-variant: small-caps; }
+span.underline{ text-decoration: underline; }
+q { quotes: "“" "”" "‘" "’"; }
+div.column{ display: inline-block; vertical-align: top; width: 50%; }
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+@media screen { /* Workaround for iBooks issue; see #6242 */
+  .sourceCode {
+    overflow: visible !important;
+    white-space: pre-wrap !important;
+  }
+}
+
+span.lawname::before {
+  content: "\0022";
+}
+span.lawname::after {
+  content: "\0022";
+}
+span.lawname {
+  font-family: "Katibeh";
+  font-size: 130%;
+}
+
+div.EqnBox::before {
+  content: "Law:  \0022" attr(data-arg1) "\022";
+  font-family: "Katibeh";
+  font-size: 160%;
+  margin-top: 0.25em;
+}
+
+div.EqnBox {
+  background-color: lightgrey;
+  border: 2px solid #000;
+  padding: 0.25em;
+  padding-left: 1em;
+  margin-bottom: 1em;
+}
+
+@font-face {
+font-family: Katibeh;
+font-style: normal;
+font-weight: normal;
+src:url("Katibeh.ttf");
+}
+
+span.annotate {
+}
+
+span.annotated {
+  float: right;
+}
+
+span.fill {
+  flex: 1;
+  border-top: 1px dotted #000;
+}
+
