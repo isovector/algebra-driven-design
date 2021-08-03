@@ -296,7 +296,7 @@ sum :: [Integer] -> Integer
   3. sum xs + sum ys = sum (xs ++ ys)
 ```
 
-You'll notice that there are now two function blocks in our put; the first
+You'll notice that there are now two function blocks in our output; the first
 describes the constructors in our background --- so we know what's being
 considered when generating laws --- while the second lists the actual functions
 we're interested in. Our resulting laws now all mention `sum`, just as

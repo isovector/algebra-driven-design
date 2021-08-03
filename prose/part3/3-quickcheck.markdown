@@ -648,7 +648,7 @@ producesAllValues gen = ioProperty $ do
       missing_cons = all_cons S.\\ gen_cons
 
   pure $ flip whenFail (null missing_cons) $ do
-    putStrLn "Generator failed to produce the following:
+    putStrLn "Generator failed to produce the following:"
     for_ missing_cons $ putStrLn . mappend "• "
 ```
 

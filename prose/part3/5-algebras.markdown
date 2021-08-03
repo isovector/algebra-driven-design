@@ -207,7 +207,7 @@ attempt to send emails whenever a relevant action happens, and rely on the laws
 to ensure we don't spam the user.
 
 Formally, we can write our two flavors of idempotency as follows. In the first,
-a function `f :: A -> A` is said to be idempotent if `lawn:defn: idempotent
+a function `f :: A -> A` is said to be idempotent if `law:defn: idempotent
 func` holds:
 
 ```{.haskell law="defn: idempotent func"}
@@ -480,7 +480,7 @@ Semigroups are required to fulfill only one equation, namely associativity
 That's it! The requirements for being a semigroup are non-demanding, and
 therefore, semigroups are extremely widespread. Some semigroups you're already
 familiar with include list and string concatenation, addition, multiplication,
-the boolean AND and OR operations, the `over` color mixing operation, the `min`
+the boolean AND and OR operations, the `behind` color mixing operation, the `min`
 and `max` functions, picking the first and last element in a series, and
 function composition itself. Additionally, things like combining disparate
 pieces of configuration usually form a semigroup. Semigroups appear everywhere!
@@ -696,7 +696,7 @@ which, in addition to the functor laws, must also respect:
 
 as well as be associative:
 
-```{.haskell law="fmap/snd/zap"}
+```{.haskell law="fmap/reassoc/zap"}
 ∀ (x :: a) (y :: b) (c :: z).
   fmap reassoc (zap x (zap y z)) = zap (zap x y) z
 ```
