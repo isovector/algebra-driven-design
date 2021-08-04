@@ -53,7 +53,7 @@ getClues
     -> MonoidalMap [k] ClueState
 ```
 
-Also, we have a sort of "sub-algebra." corresponding to the land of user
+Also, we have a sort of "sub-algebra" corresponding to the land of user
 inputs and predicates over that input:
 
 ```haskell

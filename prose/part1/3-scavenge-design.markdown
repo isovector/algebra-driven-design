@@ -811,7 +811,7 @@ many inputs it consumed in completing the first branch.
 Exercise
 
 :  Give semantics for `andThen` in terms of `completes :: Challenge -> [Input] -> Bool`.
-   Show that your these semantics necessarily contradict `law:andThen/gate`.
+   Show that these semantics necessarily contradict `law:andThen/gate`.
 
 
 While there is undoubtedly an art to choosing sound observations, this is an excellent
@@ -1489,7 +1489,7 @@ with the usual identity laws:
 
 ```{.haskell law="sub/mempty"}
 ∀ (k :: Clue).
-  sub k noList = k = sub noList k
+  sub k noClue = k = sub noClue k
 ```
 
 Before going too much further, we should slow down and think through this clue design's implications. It seems reasonable to give the following law:
@@ -1846,7 +1846,7 @@ gate    :: InputFilter i -> Challenge i -> Challenge i
 -- etc.
 ```
 
-To finish up this generalization we require a function that lifts an
+To finish up this generalization we require a function that lifts a
 `CustomFilter i` into an `InputFilter i`.
 
 ```haskell
@@ -1928,7 +1928,7 @@ Verify that these are reasonable laws and that they form a monoid homomorphism
 with `empty` and `andThen`.
 
 With these changes made, the `Clue` in `step` now sticks out like a sore thumb;
-it's as the only concrete type in the signature of `step`. And as our analysis
+it's the only concrete type in the signature of `step`. And as our analysis
 earlier showed, our `Clue` type is isomorphic to a list. Let's just drop in a
 list here, but be polymorphic over its contents.
 

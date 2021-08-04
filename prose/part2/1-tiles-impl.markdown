@@ -916,7 +916,7 @@ value at the same point in a different space. This, too, is performed
 
 Exercise
 
-:  Prove `law:ap/pure/id` is satisfied by the definitions of `pure` and `(<*>)`
+:  Prove that `law:ap/pure/id` is satisfied by the definitions of `pure` and `(<*>)`
    given here.
 
 

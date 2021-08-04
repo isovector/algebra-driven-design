@@ -363,7 +363,7 @@ takeDrop n (a:as) = a : takeDrop n (drop n as)
 -- applicative homomorphism.
 rasterize'
     :: Int  -- ^ resulting width
-    -> Int  -- ^ resulting heigeht
+    -> Int  -- ^ resulting height
     -> Tile a
     -> Compose ZipList ZipList a  -- ^ the resulting "pixels" in row-major order
 rasterize' w h t = coerce $ rasterize w h t

@@ -316,7 +316,7 @@ main = do
 rasterize
     :: forall a
      . Int  -- ^ resulting width
-    -> Int  -- ^ resulting heigeht
+    -> Int  -- ^ resulting height
     -> Tile a
     -> [[a]]  -- ^ the resulting "pixels" in row-major order
 rasterize w h t = do
