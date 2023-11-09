@@ -1,0 +1,1 @@
+CodeBlock ("",["haskell","ghci"],[]) "> :t sample\nsample :: Tile a -> Double -> Double -> a\n\n"
