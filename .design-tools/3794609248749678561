@@ -1,1 +1,0 @@
-CodeBlock ("",["haskell","ghci"],[]) "> [(+1), (*8)] <*> [1, 5]\n[2,6,8,40]\n\n\n> getZipList $ ZipList [(+1), (*8)] <*> ZipList [1, 5]\n[2,40]\n\n\n"

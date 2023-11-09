@@ -9,7 +9,7 @@ numbersections: true
 fontsize: 11pt
 # mainfont: JT Symington
 monofont: Inconsolata
-sansfont: Cabin
+sansfont: MLMRoman10
 toc: true
 geometry:
   - top=25mm

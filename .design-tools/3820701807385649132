@@ -1,1 +1,0 @@
-CodeBlock ("",["haskell","ghci"],[]) "> fst $ step mempty (Just $ Number 1) (andThen (clue \"problem\" empty) $ points 5) >>= step mempty\nLeaving GHCi.\n\n\n"

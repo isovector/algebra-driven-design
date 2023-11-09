@@ -1,1 +1,0 @@
-CodeBlock ("",["haskell","ghci"],[]) "> take 25 $ getZipList $ pure 0\n[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]\n\n\n"

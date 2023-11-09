@@ -366,6 +366,10 @@ $if(csl-refs)$
   {$if(csl-hanging-indent)$\setlength{\parindent}{0pt}%
   \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces$endif$}%
   {\par}
+\newenvironment{CSLReferences}%
+  {$if(csl-hanging-indent)$\setlength{\parindent}{0pt}%
+  \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces$endif$}%
+  {\par}
 $endif$
 
 $if(title)$
@@ -560,11 +564,23 @@ $endfor$
 
 \raggedright
 
-Copyright \textcopyright 2020, Sandy Maguire
+{\small
+Cofree Press
+
+\quad
+
+First published 2020
+
+\quad
+
+Copyright \textcopyright\;2020, Sandy Maguire
 
 All rights reserved.
-\spaceMyBox
-Version 1.2
+
+\quad
+
+Version 1.2 / 2023-11-09
+}
 
 \justify
 

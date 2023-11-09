@@ -52,7 +52,6 @@ library
       ViewPatterns
       DerivingStrategies
       DerivingVia
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-uni-patterns -Wincomplete-record-updates -Wredundant-constraints -fhide-source-paths -Wpartial-fields -Wmissing-deriving-strategies
   build-depends:
       JuicyPixels
     , QuickCheck
