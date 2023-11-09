@@ -1,10 +1,8 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.31.2.
+-- This file has been generated from package.yaml by hpack version 0.35.1.
 --
 -- see: https://github.com/sol/hpack
---
--- hash: 68a4ee352b9f5fe9f17bfba186c6c0f7b604d5d462f1f9aa407a659bbc4302cf
 
 name:           algebra-driven-design
 version:        0.1.0.0
@@ -35,11 +33,25 @@ library
       Tiles.Efficient
       Tiles.Initial
   other-modules:
-      Paths_sdcp
+      Paths_algebra_driven_design
   hs-source-dirs:
       code/
-  default-extensions: ConstraintKinds DeriveGeneric GeneralizedNewtypeDeriving InstanceSigs KindSignatures LambdaCase OverloadedStrings RecordWildCards ScopedTypeVariables StandaloneDeriving TupleSections TypeApplications ViewPatterns DerivingStrategies DerivingVia
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-uni-patterns -Wincomplete-record-updates -Wredundant-constraints -fhide-source-paths -Wpartial-fields -Wmissing-deriving-strategies
+  default-extensions:
+      ConstraintKinds
+      DeriveGeneric
+      GeneralizedNewtypeDeriving
+      InstanceSigs
+      KindSignatures
+      LambdaCase
+      OverloadedStrings
+      RecordWildCards
+      ScopedTypeVariables
+      StandaloneDeriving
+      TupleSections
+      TypeApplications
+      ViewPatterns
+      DerivingStrategies
+      DerivingVia
   build-depends:
       JuicyPixels
     , QuickCheck

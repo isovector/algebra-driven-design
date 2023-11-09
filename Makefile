@@ -8,8 +8,8 @@ PANDOC_OPTS := --highlight-style theme/highlighting.theme \
                --syntax-definition=theme/haskell.xml \
                --filter design-tools-exe \
                -F pandoc-crossref \
-               -F pandoc-citeproc \
                --from markdown+fancy_lists \
+               --citeproc \
                --bibliography=prose/bib.bib \
                -s \
                --top-level-division=part

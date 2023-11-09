@@ -1,0 +1,1 @@
+CodeBlock ("",["haskell","ghci"],[]) "> quickCheck $ cw @Bool . cw . cw . cw =~= id\n+++ OK, passed 100 tests.\n\n"

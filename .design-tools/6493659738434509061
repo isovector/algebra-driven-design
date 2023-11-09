@@ -1,0 +1,1 @@
+CodeBlock ("",["haskell","ghci"],[]) "> printSquare [[1,2],[3,4],[5,6]]\n12\n34\n56\n\n"

@@ -1,0 +1,1 @@
+CodeBlock ("",["haskell","ghci"],[]) "> printSquare $ fmap reverse $ transpose [[1,2],[3,4],[5,6]]\n531\n642\n\n"

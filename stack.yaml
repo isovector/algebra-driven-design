@@ -1,12 +1,12 @@
-resolver: lts-15.0
+resolver: lts-18.18
 
 packages:
 - .
 
 extra-deps:
 # - /home/sandy/prj/checkers
-- /home/sandy/prj/quickspec
-- twee-lib-2.2@sha256:9fe9327505d8f450a94f2fc9eea74b292901b7992d520aa1dd4f0410fbe0e594,2112
+# - /home/sandy/prj/quickspec
+- twee-lib-2.4.2
 - quickcheck-higherorder-0.1.0.0@sha256:7264de7245f840b780fbdab67aa5becc9514a8ad86861504a03052b99cbd8ef6,2238
 - test-fun-0.1.0.0@sha256:f0315ca26b8af27ec177c89a5ab2e25b535db36029cee428d8f5eafa66407296,1251
 - git: https://github.com/lierdakil/pandoc-crossref.git
@@ -16,6 +16,6 @@ extra-deps:
 - ixset-1.1.1.1@sha256:be27159a55e8a81b7b50a27a6ca5bb56a145296877ae4551a43c06b75256103a,1623
 - syb-with-class-0.6.1.13@sha256:b4316425ca16cabd2b982fb3c8e417f73b406dc8a23fd02973ab3d906141287e,1853
 - monoidal-containers-0.6.0.1@sha256:7d776942659eb4d70d8b8da5d734396374a6eda8b4622df9e61e26b24e9c8e40,2501
-# - quickspec-2.1.4
+- quickspec-2.2
 
 

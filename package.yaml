@@ -30,17 +30,6 @@ dependencies:
 - generic-data
 - dlist
 
-ghc-options:
-  - -Wall
-  - -Wcompat
-  - -Widentities
-  - -Wincomplete-uni-patterns
-  - -Wincomplete-record-updates
-  - -Wredundant-constraints
-  - -fhide-source-paths
-  - -Wpartial-fields
-  - -Wmissing-deriving-strategies
-
 default-extensions:
   - ConstraintKinds
   - DeriveGeneric

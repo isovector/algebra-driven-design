@@ -1,0 +1,1 @@
+CodeBlock ("",["haskell","ghci"],[]) "> quickCheck $ \\t1 t2 -> cw @[Word8] t1 <> cw t2 =~= cw (t1 <> t2)\n+++ OK, passed 100 tests.\n\n"
