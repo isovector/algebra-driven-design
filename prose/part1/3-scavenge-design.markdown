@@ -1504,7 +1504,7 @@ consider how `sub` distributes over `clue`. Equally reasonably, we can give the
 law:
 
 ```{.haskell law="clue/sub"}
-∀ (k1 :: Clue) (k2 :: Clue).
+∀ (k1 :: Clue) (k2 :: Clue) (c :: Challenge).
   clue (sub k1 k2) c = clue k1 (clue k2 c)
 ```
 
