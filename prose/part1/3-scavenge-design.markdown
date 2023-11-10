@@ -1660,7 +1660,7 @@ state in the process.
 ```{.haskell law="step/clue/empty"}
 ∀ (kctx :: Clue) (i :: Maybe Input) (k :: Clue).
   step kctx i (clue k empty) =
-    tellClue (singleton (sub kctx k) completed) *> empty
+    tellClue (singleton (sub kctx k) completed) *> pure empty
 ```
 
 Notice the call to `sub` here. We must prepend the current `Clue`
@@ -1709,7 +1709,7 @@ of the currently accessible clues in the given `Challenge`. Armed with
   step kctx i c1 == (z1, empty) &&
   step kctx i c2 == (z2, c2') =>
     step kctx i (eitherC c1 c2) =
-      fmap seenToFailed (findClues kctx c2') *>
+      tellClue (fmap seenToFailed (findClues kctx c2')) *>
         step kctx i c2 *>
           step kctx i c1
 ```
