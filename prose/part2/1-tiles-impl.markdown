@@ -752,7 +752,7 @@ you should use a value somewhere between 7 and 9.
 quickSpec $ sig <> withPrintStyle ForQuickCheck <> withMaxTests 1000 <> withMaxTestSize 20 <> withMaxTermSize 2
 ```
 
-The resulting `laws_quickspec` can be pasted into a test module, and executed
+The resulting `quickspec_laws` can be pasted into a test module, and executed
 via:
 
 ```haskell
@@ -760,7 +760,7 @@ runTests :: IO ()
 runTests
   = traverse_
       (quickCheck . uncurry counterexample)
-      laws_quickspec
+      quickspec_laws
 ```
 
 As an added precaution, it's good form to ensure that your new tests are green
