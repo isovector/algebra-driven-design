@@ -973,7 +973,7 @@ elegantly:
 ```
 
 Without the challenging `transpose` machinery that we saw in `law:sample/cw`, we
-can specify `ccw` directly, without needing to relegate to `law:ccw`:
+can specify `ccw` directly, without needing to relegate to `law:ccw/cw`:
 
 ```{.haskell law="sample/ccw"}
 ∀ (t :: Tile a) (x :: Double) (y :: Double).
