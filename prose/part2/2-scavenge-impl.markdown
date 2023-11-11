@@ -205,7 +205,7 @@ One particular annoyance when working with initial encodings is having two
 terminal constructors which behave similarly --- in our case `empty` and
 `reward` both immediately reduce to `empty`, but all of our `step` laws are in
 terms of `isEmpty`. Rather than dealing with double logic everywhere, we can
-instead use `law:andThen/empty` to rewrite `reward r` as `andThen (reward r)
+instead use `law:andThen:identity` to rewrite `reward r` as `andThen (reward r)
 empty`. In this form, `reward r` no longer acts as a terminal constructor, so
 we can use `andThen (reward r)` as a primitive form:
 
@@ -220,7 +220,7 @@ which we can use to give an implementation for `reward` as follows:
 
 ```{.haskell .proof}
   reward r
-=  -- .via andThen/empty
+=  -- .via andThen:identity
   andThen (reward r) empty
 =  -- .via RewardThen
   RewardThen r empty
