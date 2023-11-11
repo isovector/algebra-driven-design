@@ -752,7 +752,7 @@ you should use a value somewhere between 7 and 9.
 quickSpec $ sig <> withPrintStyle ForQuickCheck <> withMaxTests 1000 <> withMaxTestSize 20 <> withMaxTermSize 2
 ```
 
-The resulting `laws_quickspec` can be pasted into a test module, and executed
+The resulting `quickspec_laws` can be pasted into a test module, and executed
 via:
 
 ```haskell
@@ -760,7 +760,7 @@ runTests :: IO ()
 runTests
   = traverse_
       (quickCheck . uncurry counterexample)
-      laws_quickspec
+      quickspec_laws
 ```
 
 As an added precaution, it's good form to ensure that your new tests are green
@@ -973,7 +973,7 @@ elegantly:
 ```
 
 Without the challenging `transpose` machinery that we saw in `law:sample/cw`, we
-can specify `ccw` directly, without needing to relegate to `law:ccw`:
+can specify `ccw` directly, without needing to relegate to `law:ccw/cw`:
 
 ```{.haskell law="sample/ccw"}
 ∀ (t :: Tile a) (x :: Double) (y :: Double).
@@ -986,8 +986,8 @@ Again, this pair of laws is elegant, symmetric, and clearly shows why `cw . ccw
 
 
 We can think of `beside` as a spatial transformation from the coordinate space
-of `both c1 c2` (the "source") into the coordinate spaces of `c1` and `c2` (the
-"destinations.") The cut-off between the two happens tiles at $x = 0$, therefore for
+of `beside c1 c2` (the "source") into the coordinate spaces of `c1` and `c2` (the
+"destinations.") The cut-off between the two tiles happens at $x = 0$, therefore for
 $x < 0$ we should choose `c1` and for $0 \leq x$ choose `c2`. Due to the
 contravariance of spatial transformations, this operation's mathematics are rather hard to visualize mentally. @Fig:beside-impl shows the `c1` case and should help.
 

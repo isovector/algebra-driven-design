@@ -1660,7 +1660,7 @@ state in the process.
 ```{.haskell law="step/clue/empty"}
 ∀ (kctx :: Clue) (i :: Maybe Input) (k :: Clue).
   step kctx i (clue k empty) =
-    tellClue (singleton (sub kctx k) completed) *> empty
+    tellClue (singleton (sub kctx k) completed) *> pure empty
 ```
 
 Notice the call to `sub` here. We must prepend the current `Clue`
@@ -1709,7 +1709,7 @@ of the currently accessible clues in the given `Challenge`. Armed with
   step kctx i c1 == (z1, empty) &&
   step kctx i c2 == (z2, c2') =>
     step kctx i (eitherC c1 c2) =
-      fmap seenToFailed (findClues kctx c2') *>
+      tellClue (fmap seenToFailed (findClues kctx c2')) *>
         step kctx i c2 *>
           step kctx i c1
 ```
@@ -1758,10 +1758,10 @@ findClues _    (gate _ _) = mempty
 findClues kctx (andThen c _)    = findClues kctx c
 findClues kctx (reward _) = mempty
 findClues kctx (clue k empty)
-  = singleton (kctx <> [k]) completed
+  = singleton (kctx <> k) completed
 findClues kctx (clue k c)
-  = singleton (kctx <> [k]) seen
-    <> findClues (kctx <> [k]) c
+  = singleton (kctx <> k) seen
+    <> findClues (kctx <> k) c
 ```
 
 
@@ -1897,7 +1897,7 @@ data Challenge i r
 reward :: r -> Challenge i r
 
 step
-    :: ( IsFilter i
+    :: ( HasFilter i
        , Monoid r
        , Commutative r
        )
@@ -1938,7 +1938,7 @@ data Challenge i r k
 clue :: [k] -> Challenge i k r -> Challenge i k r
 
 step
-    :: ( IsFilter f
+    :: ( HasFilter f
        , Monoid r
        , Commutative r
        , Ord k
