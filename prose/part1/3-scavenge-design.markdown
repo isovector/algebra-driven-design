@@ -1758,10 +1758,10 @@ findClues _    (gate _ _) = mempty
 findClues kctx (andThen c _)    = findClues kctx c
 findClues kctx (reward _) = mempty
 findClues kctx (clue k empty)
-  = singleton (kctx <> [k]) completed
+  = singleton (kctx <> k) completed
 findClues kctx (clue k c)
-  = singleton (kctx <> [k]) seen
-    <> findClues (kctx <> [k]) c
+  = singleton (kctx <> k) seen
+    <> findClues (kctx <> k) c
 ```
 
 
