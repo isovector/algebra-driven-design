@@ -1897,7 +1897,7 @@ data Challenge i r
 reward :: r -> Challenge i r
 
 step
-    :: ( IsFilter i
+    :: ( HasFilter i
        , Monoid r
        , Commutative r
        )
@@ -1938,7 +1938,7 @@ data Challenge i r k
 clue :: [k] -> Challenge i k r -> Challenge i k r
 
 step
-    :: ( IsFilter f
+    :: ( HasFilter f
        , Monoid r
        , Commutative r
        , Ord k
